@@ -1,0 +1,151 @@
+.c1 {
+    
+	
+	background-color: #CCCCCC;
+	height : 50px;
+	width : 200px;
+	border-radius: 15px;
+	margin-top: 10px;
+	filter: alpha(opacity=0);
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+	opacity : 0.0;
+    margin-bottom: 10px;
+	
+	
+}
+
+.s1{
+	
+	background: transparent;
+	font-size: 14px;
+	height: 50px;
+	width : 200px;
+	border-radius: 15px;
+
+}
+
+.o1{
+	
+	background: #CCCCCC;
+	font-size: 14px;
+	border-radius: 15px;
+
+}
+
+.test{
+	background: yellow;
+	overflow : hidden;
+	
+}
+
+.mainDiv{
+	
+	margin-left : auto;
+	margin-right: auto;
+	border-radius: 15px;
+	width : 800px;
+	background-color : #999999;
+	min-height : 500px;
+	padding : 20px;
+	box-shadow: 10px 10px 5px #0f0f0f;
+}
+
+.rightDiv {
+	
+	margin-left : auto;
+	margin-right: auto;
+	background : transperant;
+	display : inline-block;
+	*display : inline;
+	zoom : 1;
+	min-height : 500px;
+	overflow : hidden;
+	min-width : 200px;
+	
+
+}
+
+#menuDiv{
+	display : inline-block;
+	*display : inline;
+	zoom : 1;
+	width : 200px;
+	vertical-align : top;
+	padding : 25px;
+}
+
+table, th {
+	
+	border: 1px solid black;
+	
+}
+
+table, td {
+	
+	border: 1px solid black;
+	border-collapse : collapse;
+	text-align : center;
+	
+}
+
+td {
+	
+	min-width : 150px;
+}
+
+body{
+	
+	background-image: url("images/bg_image.png");
+}
+
+input[type=text], input {
+    width: 70%;
+    padding: 5px 20px;
+    margin: 8px 0; 
+    border: 1px solid #ccc;
+    border-radius: 15px;
+   
+}
+input[type=radio   ]:not(old){
+  width     : 2em;
+  margin    : 0;
+  padding   : 0;
+  font-size : 1em;
+  
+}
+
+input[type=submit] {
+    width: 100%;
+    background-color: #CCCCCC;
+    padding: 5px 10px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+}
+input[type=submit]:hover {
+    background-color: #b7b7b7;
+}
+
+.formCSS {
+	
+	background-color : #666666;
+	padding : 5px;
+	border-radius: 15px;
+}
+
+.browserDiv {
+	
+	margin-left : auto;
+	margin-right: auto;
+	border-radius: 15px;
+	width : 900px;
+	background-color : #999999;
+	min-height : 500px;
+	padding : 20px;
+	margin:0 auto;
+
+}
+
+
+

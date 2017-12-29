@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>Index</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script src="data_new.json" type="text/javascript">
+		
+	</script>
+	<script src="animation.js" type="text/javascript">	
+	</script>
+	<script src="cookies.js" type="text/javascript">	
+	</script>
+	<script src="tabledata.js" type="text/javascript">	
+	</script>
+	
+	<script type="text/javascript">
+		var ieSeven=false;
+		var ltIeSeven=false;
+	</script>
+<!-- IE conditional -->
+<!--[if lt IE 8]>
+<script>
+	var ieSeven=true
+</script>
+<![endif]-->
+<!--[if lt IE 7]>
+<script>
+	var ltIeSeven=true
+</script>
+<![endif]-->
+	<script>
+		// navigate to download a latest browser if the current browser is very old
+		if(ltIeSeven){
+			window.location = "browser.html";
+		}
+		// this function validates the form data and stores it in local storage or cookies(for IE 7)
+		function validate(ieSeven){
+			// get the form data
+			var name = document.forms[0].elements[0];
+			var email = document.forms[0].elements[1];
+			var maleGender = document.forms[0].elements[2];
+			var femaleGender = document.forms[0].elements[3];
+			//check if full name has been entered
+			if(name.value==""){
+		
+				var noFullName = document.createTextNode('*Required field');
+				document.forms[0].insertBefore(noFullName,name);
+				return false;
+			}
+			//check if email has been entered
+			else if( email.value==""){
+				var noEmail = document.createTextNode('*Required field');
+				document.forms[0].insertBefore(noEmail,email);
+				return false;
+			}
+			//check if gender has been selected
+			else if( !femaleGender.checked && !maleGender.checked){
+				var noGender = document.createTextNode('*Required field');
+				document.forms[0].insertBefore(noGender,gender[0]);
+				return false;
+			}
+	
+			else{
+				// store data in cookies for IE 7
+				if(ieSeven){
+					
+					SetCookie("fullName",name.value);
+					SetCookie("email",email.value);
+					var gender = maleGender.checked==true ? 'male' : 'female';
+					SetCookie("gender",gender);
+			
+				}
+				// store form data for all other browsers
+				else{
+					localStorage.setItem("fullName",name.value);
+					localStorage.setItem("email",email.value);
+					var gender = maleGender.checked==true ? 'male' : 'female';
+					
+					localStorage.setItem("gender",gender);
+				}
+				return true;
+			}
+	
+		}
+		// This function populates the form
+		function populateForm(){
+		
+			// create a div node and a form node (div node will contain the form node)
+			var div = document.createElement('div');
+			var form = document.createElement('form');
+			
+			// data from localStorage or cookies will be loaded into the beow variables.
+			var storedName = "";
+			var storedEmail = "";
+			var storedGender = "";
+			
+			// define basic form attributes
+			form.name = "inputForm";
+			form.method = "GET";
+			form.action = "index.html";
+			// load form data from cookies for IE 7
+			if(ieSeven){
+				form.setAttribute('onsubmit',function(){return validate(ieSeven);});
+				if(GetCookie("fullName")){
+					storedName = GetCookie("fullName");
+					storedEmail = GetCookie("email");
+					storedGender = GetCookie("gender");
+					
+				}
+			}
+			// load data from local storage for all other browsers.
+			else{
+				
+				form.setAttribute('onsubmit',"return validate(ieSeven)");
+				if(localStorage.getItem("fullName")){
+					storedName = localStorage.getItem("fullName");
+					storedEmail = localStorage.getItem("email");
+					storedGender = localStorage.getItem("gender");
+					
+				}
+			
+			}
+			
+			// create a text node and iput node for the form
+			var fullName = document.createTextNode('Full Name');
+			formInput = document.createElement('input')
+			formInput.type = "text"
+			formInput.name = "fullName"
+			formInput.value = storedName; 
+			
+			// create input node for email and text node
+			var email = document.createTextNode('Email id');
+			emailInput = document.createElement('input');
+			emailInput.type = "text";
+			emailInput.name = "email";
+			//populate the cookie or local storage data..
+			emailInput.value = storedEmail;
+			
+			// create a radiobutton for 'male' with a label for it
+			var gender = document.createTextNode('Select Gender');
+			genderInput1 = document.createElement('input');
+			var genderMale = document.createTextNode('Male');
+			var labelMale = document.createElement('label');
+			labelMale.appendChild(genderMale);
+			genderInput1.type = "radio";
+			genderInput1.name = "gender";
+			genderInput1.value = "male";
+			
+			// create a radiobutton for 'female' with a label for it
+			genderInput2 = document.createElement('input');
+			var genderFemale = document.createTextNode('Female');
+			var labelFemale = document.createElement('label');
+			labelFemale.appendChild(genderFemale);
+			genderInput2.type = "radio";
+			genderInput2.name = "gender";
+			genderInput2.value = "female";
+			
+			// insert the radio buttons and label in a <P> tag
+			var pTag=  document.createElement('p');
+			pTag.appendChild(labelMale);
+			pTag.appendChild(genderInput1);
+			pTag.appendChild(labelFemale);
+			pTag.appendChild(genderInput2);
+			
+			// load gender value from cookie for IE 7
+			if(ieSeven){
+				var tf1 = storedGender=='female' ? true : false; 
+				genderInput2.setAttribute('defaultChecked',tf1);
+				
+				var tf = storedGender=='male' ? true : false; 
+				genderInput1.setAttribute('defaultChecked',tf);
+				// assign the div a CSS class
+				div.setAttribute('className','formCSS');
+			}
+			// load gender value from local storage for all other browsers on the form
+			else{
+				genderInput1.checked = storedGender=='male' ? true : false; 
+				genderInput2.checked = storedGender=='female' ? true : false; 
+				
+				// assign the div a CSS class
+				div.setAttribute('class','formCSS');
+			
+			}
+			
+			// create a submit buttom
+			submit = document.createElement('input');
+			submit.type = "submit";
+			submit.value = "submit";
+			
+			// attach all the input elements to the form
+			form.appendChild(fullName);
+			form.appendChild(formInput);
+			form.appendChild(email);
+			form.appendChild(emailInput);
+			form.appendChild(gender);
+			form.appendChild(pTag);
+			form.appendChild(submit);
+			
+			// append form to the div
+			div.appendChild(form)
+			document.getElementById('menuDiv').appendChild(div)
+			
+			
+		}
+		
+		// ths function populates the drop down 
+		function populateDropDown(value,select,div){
+			
+			nameData = mydata[value];
+			// if data["key"] exists populate on dropdown, else load the form since artists have only data["songs"]
+			if(nameData["key"]){
+				// extract the names of the drop down
+				data = nameData["key"];
+				
+				for(var i=0,len=data.length;i<len;i++){
+					// cteate the drop down option elelment
+					var option = document.createElement('option');
+					option.setAttribute('class','o1');
+					var textnode = document.createTextNode(data[i]);
+					option.setAttribute('value',data[i]);
+					//the default element in the drop down
+					if(i==0){
+						var defaultoption = document.createElement('option');
+						defaultoption.setAttribute('class','o1');
+						var defaultnode = document.createTextNode('--select--');
+						defaultoption.appendChild(defaultnode);
+						select.appendChild(defaultoption);
+					}
+					// append options and text nodes
+					option.appendChild(textnode);
+					select.appendChild(option);
+			
+					}
+					//attach the select option to div
+					div.appendChild(select);
+					
+					document.getElementById('menuDiv').appendChild(div)
+					// fade-in the drop down menu;
+					fadeIn(div,0.05,ieSeven);
+					// dynamically create the table
+					table = populateTable(nameData["songs"]);
+					tableD = document.getElementById("tableDiv")
+					// clear the previous existing table
+					if(tableD.children.length !=0){
+						c = tableD.children;
+						tableD.removeChild(c[0]);
+					}
+					// fade in the table
+					fadeTable(tableD,0);
+					document.getElementById("tableDiv").appendChild(table);
+					
+			}
+			// populate table for the last div in the selection tree
+			else{
+			
+				table = populateTable(nameData["songs"]);
+				tableD = document.getElementById("tableDiv")
+				if(tableD.children.length !=0){
+					c = tableD.children;
+					tableD.removeChild(c[0]);
+				}
+				fadeTable(tableD,0);
+				document.getElementById("tableDiv").appendChild(table);
+				// load the form
+				populateForm()
+			
+			}
+		
+		}
+		
+		// this function remove the lowe sibings divs of the current element
+		function checkAndRemove(dom){
+			if(dom.parentElement){
+				// parent of the select option (div element)
+				var parent = dom.parentElement;
+				// parent of the div (super div)
+				pparent = parent.parentElement;
+				var children = pparent.children;
+				
+				for(var i = children.length-1; i >0;i--){
+					// if the current element is found then break
+					if(children[i] == dom.parentElement){
+						break;
+					}
+					else{	
+						// fade and delete the other sibling elements
+						fadeOut(pparent,children[i],1.0,ieSeven);
+					}
+					
+				}
+				
+			
+			}
+			
+		}
+		
+		// create a div and a select drop down option
+		function populateOne(dom){
+			//am I the first one?  Is dom a string, or an object - if string, then build 'init' - else build dom.value
+			var value = dom.value;
+			// the initial drop down
+			if (dom === 'init'){
+				var flag = checkAndRemove(dom)
+				
+				var div = document.createElement('div');
+				var select = document.createElement('select');
+				// if its IE 7, then  use this
+				if(ieSeven){
+					select.setAttribute('onchange',function(){populateOne(this);});
+					div.setAttribute('className','c1');
+					select.setAttribute('className','s1');
+				}
+				else{
+					select.setAttribute('onchange','populateOne(this)');
+					div.setAttribute('class','c1');
+					select.setAttribute('class','s1');
+				}
+				
+				populateDropDown(dom,select,div);
+				
+			}
+			// all other drop downs based on the elements selected previously
+			else if(dom.value == '--select--'){
+				var flag = checkAndRemove(dom);
+				var parent = dom.parentElement;
+				var pparent = parent.parentElement;
+				var childs = pparent.children;
+				var v = '';
+				for(var i =0,len=childs.length;i<len;i++){
+				
+					if(childs[i] == parent && i==0){
+						v = 'init'
+					}
+					else if(childs[i] == parent){
+						v = childs[i-1].children[0].value;
+						
+					}
+				}
+				nameData = mydata[v];
+				table = populateTable(nameData["songs"]);
+				tableD = document.getElementById("tableDiv")
+				if(tableD.children.length !=0){
+					c = tableD.children;
+					tableD.removeChild(c[0]);
+				}
+				fadeTable(tableD,0);
+				document.getElementById("tableDiv").appendChild(table);
+				
+				
+			}
+			else {
+				
+				var flag = checkAndRemove(dom);
+				var div = document.createElement('div');
+				
+				var select = document.createElement('select');
+				//if IE 7 use this
+				if(ieSeven){
+					select.setAttribute('onchange',function(){populateOne(this)});
+					select.setAttribute('className','s1');
+					div.setAttribute('className','c1');
+				}
+				else{
+					select.setAttribute('onchange','populateOne(this)');
+					div.setAttribute('class','c1');
+					select.setAttribute('class','s1');
+				}
+				
+				populateDropDown(value,select,div);
+			
+			}
+			
+					
+		
+		}
+		
+		function $$(id){
+		
+			return documet.getElementById(id);
+		}
+		
+		function $$$(tagname,number){
+		
+			return document.getElementByTagName(tagname)[number];
+		}
+	</script>
+	
+</head>
+<body onload="populateOne('init');">
+<div class="mainDiv" >
+	<div id="menuDiv">
+	</div>
+	<div id="tableDiv" class="rightDiv">
+	</div>
+</div>
+
+</body>
+
+</html>

@@ -1,0 +1,355 @@
+var mydata={
+
+
+	"init" :{
+	
+		"key" : ["jazz","pop","rock"],
+		"songs" : ["Stoned soul picnic","The Confessions","Map to the treasure","Sound Prints","Painter's way","Earmarks",
+				   "Abaton","Real Joe","Azriel","Viola da samba","Dance the palace","Peace in my heart",
+				   "Wood choppers ball","Four Brothers","Early Autum","So What","Blue in Green","All blues","Slip City","Warmeland","Midsommer",
+				   "Straight Ahead","Caravan","Free Standards","Dat dere","Jazz Child","Am I blue","You thrill me","Song of Clifford",
+				   "Rick Kick Shaw","Enter Evening","Just Friends","Turkish Mambo","Ju-Ju","Digression","Played Twice","All Blues","Ask me now",
+				   "Heroes","Lets Dance","Under Pressure","Running up the hill","Babooshka","Army Dreamers","songs","An Ending","Third Uncle","Golden Hours",
+				   "Sua Cara","Lean on","Run up","Good Vibrations","Kokomo","I get around","Bye bye bye","Pop","Gone","get lucky","One more time","Instant crush","Story of my life","You & I","History","Incomlete","Everybody","Larger than life","Down","Angel","Deliver",
+				   "Raining blood","Bloodline","Repentless","Enter Sandman","One","The Unforgiven","Symphony of Destruction","Hanger 18","Angry Again",
+				   "Sacrificial Suicide","In the minds of evil","Dead but Dreaming","Kafir","Excration text","Freezing moon","Pyswar","Watchers",
+				   "Burzum","Lost Wisdom","Key tothe gate","Tyrants","Slarfall","Time bomb","Ruby shono","Forever","Lick it up","I love it loud",
+				   "Last Caress","Scream","Halloween","21 guns","good riddance","longview","Californification","otherside","By the way"
+				   ]
+	
+	
+	},
+	
+	"jazz" : {
+	
+		"key" : ["chamber jazz","cool jazz","free jazz","avant grande jazz"],
+		"songs" : ["Stoned soul picnic","The Confessions","Map to the treasure","Sound Prints","Painter's way","Earmarks",
+				   "Abaton","Real Joe","Azriel","Viola da samba","Dance the palace","Peace in my heart",
+				   "Wood choppers ball","Four Brothers","Early Autum","So What","Blue in Green","All blues","Slip City","Warmeland","Midsommer",
+				   "Straight Ahead","Caravan","Free Standards","Dat dere","Jazz Child","Am I blue","You thrill me","Song of Clifford",
+				   "Rick Kick Shaw","Enter Evening","Just Friends","Turkish Mambo","Ju-Ju","Digression","Played Twice","All Blues","Ask me now"]
+	},
+	
+	"rock" : {
+	
+		"key" : ["hard rock","alternative rock"],
+		"songs" : ["Raining blood","Bloodline","Repentless","Enter Sandman","One","The Unforgiven","Symphony of Destruction","Hanger 18","Angry Again",,
+					"Sacrificial Suicide","In the minds of evil","Dead but Dreaming","Kafir","Excration text","Freezing moon","Pyswar","Watchers",
+					"Burzum","Lost Wisdom","Key tothe gate","Tyrants","Slarfall","Time bomb","Ruby shono","Forever","Lick it up","I love it loud",
+					"Last Caress","Scream","Halloween","21 guns","good riddance","longview","Californification","otherside","By the way"]
+	
+	},
+	
+	"pop" : {
+	
+		"key" : ["art pop","dance pop","teen pop"],
+		
+		"songs" : ["Heroes","Lets Dance","Under Pressure","Running up the hill","Babooshka","Army Dreamers","songs","An Ending","Third Uncle","Golden Hours",
+				   "Sua Cara","Lean on","Run up","Good Vibrations","Kokomo","I get around","Bye bye bye","Pop","Gone","get lucky","One more time","Instant crush","Story of my life","You & I","History","Incomlete","Everybody","Larger than life","Down","Angel","Deliver"]
+	
+	},
+
+	
+	
+	"chamber jazz" :{
+	
+		"key" : ["Billy Childs","Dave Douglas","Mark Fieldman","Meg Okura"],
+		"songs" : ["Stoned soul picnic","The Confessions","Map to the treasure","Sound Prints","Painter's way","Earmarks",
+				   "Abaton","Real Joe","Azriel","Viola da samba","Dance the palace","Peace in my heart"]
+	},
+	
+	"cool jazz" : {
+		
+		"key" : ["Woody Harman","Miles Davis","John Lewis"],
+		"songs" :["Wood choppers ball","Four Brothers","Early Autum","So What","Blue in Green","All blues","Slip City","Warmeland","Midsommer"]
+		
+	},
+	
+	"free jazz" :{
+		
+		"key" : ["Jeanne Lee","Sheila Jordan","Patty Waters"],
+		"songs" : ["Straight Ahead","Caravan","Free Standards","Dat dere","Jazz Child","Am I blue","You thrill me","Song of Clifford"]
+	},
+
+	"avant grande jazz" :{
+		
+		"key" : ["Cecil Taylor","Lennie Tristano","Anthony Braxton"],
+		"songs" :["Rick Kick Shaw","Enter Evening","Just Friends","Turkish Mambo","Ju-Ju","Digression","Played Twice","All Blues","Ask me now"]
+		
+	},
+
+	"hard rock" : { 
+	
+		"key" : ["punk rock", "heavy metal","shock rock"],
+		"songs" : ["Raining blood","Bloodline","Repentless","Enter Sandman","One","The Unforgiven","Symphony of Destruction","Hanger 18","Angry Again",
+					"Sacrificial Suicide","In the minds of evil","Dead but Dreaming","Kafir","Excration text","Freezing moon","Pyswar","Watchers",
+					"Burzum","Lost Wisdom","Key tothe gate","Tyrants","Slarfall","Time bomb","Ruby shono","Forever","Lick it up","I love it loud",
+					"Last Caress","Scream","Halloween"]
+
+	
+	},
+	
+	
+	"alternative rock" : {
+		
+		"key" : ["radiohead","green day","red hot chilli peppers"],
+		"songs" : ["creep","Karma polics","21 guns","good riddance","longview","Californification","otherside","By the way"]
+	},
+
+	"art pop" : {
+		
+		"key" : ["David bowie","kate bush","brian eno"],
+		"songs" : ["Heroes","Lets Dance","Under Pressure","Running up the hill","Babooshka","Army Dreamers","songs","An Ending","Third Uncle","Golden Hours"]
+		
+	},
+	
+	"dance pop" : {
+		
+		"key" : ["major lazer","The beach boys","NSYNC" , "Daft Punk"],
+		"songs" : ["Sua Cara","Lean on","Run up","Good Vibrations","Kokomo","I get around","Bye bye bye","Pop","Gone","get lucky","One more time","Instant crush"]
+		
+	},
+	
+	"teen pop" :{
+		
+		"key" : ["One direction","Backstreet boys","Fifth Harmony"],
+		"songs" :["Story of my life","You & I","History","Incomlete","Everybody","Larger than life","Down","Angel","Deliver"]
+	},
+	
+	"heavy metal" :{
+	
+		"key" : ["thrash metal","death metal","black metal"],
+		"songs" : ["Raining blood","Bloodline","Repentless","Enter Sandman","One","The Unforgiven","Symphony of Destruction","Hanger 18","Angry Again",
+					"Sacrificial Suicide","In the minds of evil","Dead but Dreaming","Kafir","Excration text","Freezing moon","Pyswar","Watchers",
+					"Burzum","Lost Wisdom","Key tothe gate","Tyrants","Slarfall"]
+	},
+	
+	"punk rock" : {
+		
+		"key" : ["Ramonis","Rancid"],
+		"songs" :["Poison heart","Rockaway beach","Time bomb","Ruby shono"]
+	},
+	
+	"shock rock" : {
+		
+		"key" : ["Gwar","Kiss","Misfits"],
+		"songs" : ["Sick of you","gor-gor","let us slay","Forever","Lick it up","I love it loud","Last Caress","Scream","Halloween"]
+	},
+	
+	"thrash metal" :{
+		
+		"key" : ["Slayer","Metallica","Megadeth"],
+		"songs" : ["Raining blood","Bloodline","Repentless","Enter Sandman","One","The Unforgiven","Symphony of Destruction","Hanger 18","Angry Again"]
+	},
+	
+	"death metal" : {
+		
+		"key" : ["Death","Deicide","Nile"],
+		"songs" : ["Pull the plug","Crystal mountain","Empty words","Sacrificial Suicide","In the minds of evil","Dead but Dreaming","Kafir","Excration text"]
+	},
+	
+	"black metal" : {
+		
+		"key" : ["Mayhem","Burzum","Immortal"],
+		"songs" : ["Freezing moon","Pyswar","Watchers","Burzum","Lost Wisdom","Key tothe gate","Tyrants","Slarfall"]
+	},
+	
+	"Billy Childs" : {
+		
+		"songs" : ["Stoned soul picnic","The Confessions","Map to the treasure"]
+	},
+	
+	"Dave Douglas" : {
+		
+		"songs" : ["Sound Prints","Painter's way","Earmarks","Abaton"]
+	},
+	
+	"Mark Fieldman" : {
+		
+		"songs" : ["Real Joe","Azriel"]
+	},
+	
+	"Meg Okura" : {
+		
+		"songs" : ["Viola da samba","Dance the palace","Peace in my heart"]
+	},
+	
+	"Woody Harman" :{
+		
+		"songs" : ["Wood choppers ball","Four Brothers","Early Autum"]
+	},
+	
+	"Miles Davis" : {
+		
+		"songs" : ["So What","Blue in Green","All blues"]
+	},
+	
+	"John Lewis" : {
+		
+		"songs" : ["Slip City","Warmeland","Midsommer"]
+	},
+	
+	"Jeanne Lee" :{
+		
+		"songs" : ["Straight Ahead","Caravan","Free Standards"]
+	},
+	
+	"Sheila Jordan" : {
+		
+		"songs" : ["Dat dere","Jazz Child","Am I blue"]
+	},
+	
+	"Patty Waters" : {
+		
+		"songs" : ["You thrill me","Song of Clifford"]
+	},
+	
+	"Cecil Taylor" : {
+		
+		"songs" : ["Rick Kick Shaw","Enter Evening","Just Friends"]
+	},
+	"Lennie Tristano" : {
+		
+		"songs" : ["Turkish Mambo","Ju-Ju","Digression"]
+	},
+	
+	"Anthony Braxton" : {
+		
+		"songs" : ["Played Twice","All Blues","Ask me now"]
+	},
+	
+	"David bowie" : {
+		
+		"songs" : ["Heroes","Lets Dance","Under Pressure"]
+	},
+	
+	"kate bush" :{
+		
+		"songs" : ["Running up the hill","Babooshka","Army Dreamers"]
+	},
+	
+	"brian eno" :{
+		
+		"songs" : ["An Ending","Third Uncle","Golden Hours"]
+	},
+	
+	"major lazer" : {
+		
+		"songs" : ["Sua Cara","Lean on","Run up"]
+	},
+	
+	"The beach boys" : {
+		
+		"songs" : ["Good Vibrations","Kokomo","I get around"]
+	},
+	
+	"NSYNC" : {
+		
+		"songs" : ["Bye bye bye","Pop","Gone"]
+	},
+	
+	"Daft Punk" : {
+		
+		"songs" : ["get lucky","One more time","Instant crush"]
+	},
+	
+	"One direction" : {
+		
+		"songs" : ["Story of my life","You & I","History"]
+	},
+	
+	"Backstreet boys" : {
+		
+		"songs" : ["Incomlete","Everybody","Larger than life"]
+	},
+	
+	"Fifth Harmony" : {
+		
+		"songs" : ["Down","Angel","Deliver"]
+	},
+	
+	"Slayer" : {
+		
+		"songs" : ["Raining blood","Bloodline","Repentless"]
+	},
+	
+	"Metallica" : {
+		
+		"songs" : ["Enter Sandman","One","The Unforgiven"]
+	},
+	"Megadeth" : {
+		
+		"songs" : ["Symphony of Destruction","Hanger 18","Angry Again"]
+	},
+	
+	"Death" : {
+		
+		"songs" : ["Pull the plug","Crystal mountain","Empty words"]
+	},
+	
+	"Deicide" : {
+		
+		"songs" : ["Sacrificial Suicide","In the minds of evil","Dead but Dreaming"]
+	},
+	
+	"Nile" : {
+		
+		"songs" : ["Kafir","Excration text"]
+	},
+	
+	"Mayhem" : {
+		
+		"songs" : ["Freezing moon","Pyswar","Watchers"]
+	},
+	
+	"Burzum" : {
+		
+		"songs" : ["Burzum","Lost Wisdom","Key tothe gate"]
+	},
+	
+	"Immortal" : {
+		
+		"songs" : ["Tyrants","Slarfall"]
+	},
+	
+	"Ramonis" : {
+		
+		"songs" : ["Poison heart","Rockaway beach"]
+	},
+	
+	"Rancid" : {
+		
+		"songs" : ["Time bomb","Ruby shono"]
+	},
+	
+	"Gwar" : {
+		
+		"songs" : ["Sick of you","gor-gor","let us slay"]
+	},
+	
+	"Kiss" : {
+		
+		"songs" : ["Forever","Lick it up","I love it loud"]
+	},
+	
+	"Misfits" : {
+		
+		"songs" : ["Last Caress","Scream","Halloween"]
+	},
+	
+	"radiohead" : {
+		
+		"songs" : ["creep","Karma polics"]
+	},
+	
+	"green day" : {
+		
+		"songs" : ["21 guns","good riddance","longview"]
+	},
+	
+	"red hot chilli peppers" : {
+		
+		"songs" : ["Californification","otherside","By the way"]
+	}
+	
+}
