@@ -1,0 +1,248 @@
+.jumbotron {
+
+    background: url("../images/bg_image.png");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    text-align: left;
+    color: aliceblue;
+    border-bottom: #C85959 5px solid;
+    padding: 15px;
+
+}
+
+.Orange {
+
+    color: darkorange;
+}
+
+.tab-container {
+    padding: 10px;
+    padding-bottom: 30px;
+}
+
+.panel-heading {
+
+    background: none;
+}
+
+.panel-heading h4 {
+
+    display: inline;
+}
+
+.panel-body {
+
+    background: none;
+}
+
+.inline {
+    text-align: justify;
+    padding-left: 10px;
+
+
+}
+
+.well {
+    position: relative;
+    width: 30vw;
+    color: black;
+    font-family: Montserrat, sans-serif;
+    transition: 0.5s ease;
+}
+
+.well.minor {
+    position: relative;
+    width: 30vw;
+    height: 10vh;
+    color: black;
+    font-family: Montserrat, sans-serif;
+    transition: 0.5s ease;
+    text-align: center;
+}
+
+
+.well.minor:hover {
+    background-color: orange;
+    color: aliceblue;
+    -moz-transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+    z-index: 99;
+    cursor: pointer;
+}
+
+
+// css for academic section
+.academicsEmp {
+
+    text-align: center;
+
+}
+
+.well.academics {
+    width: 30vw;
+    height: 30vh;
+    display: inline-block;
+    margin: 5px;
+    text-align: center;
+
+
+}
+
+
+.map {
+    border-radius: 5%;
+    width: 70vw;
+    height: 60vh;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.mapTitle {
+
+    font-family: Montserrat, sans-serif;
+
+}
+
+.coopBox {
+
+    padding-right: 50px;
+    display: inline-block;
+
+}
+
+
+.coopBox .well:hover {
+    background-color: orange;
+    color: aliceblue;
+    -moz-transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+    z-index: 99;
+    cursor: pointer;
+
+
+}
+
+.well.faculty {
+    text-align: center;
+    padding: 10px;
+    display: inline-block;
+}
+
+.well.faculty:hover {
+
+    background-color: orange;
+    color: aliceblue;
+    -moz-transform: scale(1.0);
+    -webkit-transform: scale(1.0);
+    transform: scale(1.1);
+    z-index: 99;
+    cursor: pointer;
+
+}
+
+.staffSection {
+    background: url("../images/bg_image.png");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: aliceblue;
+    padding: 25px;
+    padding-top: 10px;
+    border-bottom: #C85959 5px solid;
+}
+
+.well.researchInterest {
+
+    text-align: center;
+    padding: 5px;
+}
+
+
+.well.researchInterest:hover {
+
+    background-color: orange;
+    color: aliceblue;
+    -moz-transform: scale(1.0);
+    -webkit-transform: scale(1.0);
+    transform: scale(1.1);
+    z-index: 99;
+    cursor: pointer;
+
+}
+
+#researchFaculty {
+
+    background: url("../images/bg_image.png");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: aliceblue;
+}
+
+.fa {
+    padding: 20px;
+    font-size: 30px;
+    width: 5vw;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+    border-radius: 100%;
+}
+
+.fa:hover {
+    opacity: 0.9;
+}
+
+.fa-facebook {
+    background: #3B5998;
+    color: white;
+}
+
+.fa-twitter {
+    background: #55ACEE;
+    color: white;
+}
+
+.linkBackground {
+
+    background: url("../images/bg_image.png");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    text-align: left;
+    color: aliceblue;
+    padding: 15px;
+}
+
+.copy a{
+    
+    color: darkorange;
+    
+}
+
+.copy p{
+    
+    font-size: 120%;
+    text-align: left;
+}
+.lightbox {
+    
+    display: none;
+}
+
+
+.spin{
+
+    position: absolute;
+    padding-left: 50vw;
+    z-index: 99;
+}
+
+
+.tablecss {
+
+    display: none;
+}
